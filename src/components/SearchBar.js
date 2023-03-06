@@ -23,7 +23,7 @@ function SearchBar({ onSubmit }) {
           onChange={handleChange}
           placeholder="Enter Search Term"
         />
-        <input type="reset" onClick={handleClick} />
+        <input type="reset" value="clear" onClick={handleClick} />
       </form>
     </div>
   );
