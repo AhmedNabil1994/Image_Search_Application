@@ -1,7 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+.search-bar form {
+  display: flex;
+  justify-content: center;
+}
 .search-bar input {
-  display: block;
-  margin: auto;
-  width: 50%;
   border-radius: 4px;
   padding: 10px;
+}
+.search-bar input[type="text"] {
+  flex-basis: 50%;
+  margin-right: 10px;
+}
+.search-bar input[type="reset"] {
+  cursor: pointer;
+}
+@media (max-width: 575px) {
+  .search-bar form {
+    display: block;
+  }
+  .search-bar input[type="text"],
+  .search-bar input[type="reset"] {
+    width: 100%;
+  }
+  .search-bar input[type="reset"] {
+    margin-top: 15px;
+  }
 }

@@ -9,6 +9,11 @@ function SearchBar({ onSubmit }) {
   const handleChange = (e) => {
     setTerm(e.target.value);
   };
+
+  const handleClick = (e) => {
+    setTerm("");
+  };
+
   return (
     <div className="search-bar">
       <form onSubmit={handleFormSubmit}>
@@ -18,6 +23,7 @@ function SearchBar({ onSubmit }) {
           onChange={handleChange}
           placeholder="Enter Search Term"
         />
+        <input type="reset" onClick={handleClick} />
       </form>
     </div>
   );
